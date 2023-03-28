@@ -1,0 +1,23 @@
+﻿<Window x:Class="CadastroContato.Formularios.ListarContato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CadastroContato.Formularios"
+        mc:Ignorable="d"
+        Title="ListarContato" Height="450" Width="356">
+    <Grid Background="Black">
+        <Label Content="____" HorizontalAlignment="Left" Margin="20,14,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>
+        <Label Content="____" HorizontalAlignment="Left" Margin="20,4,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>
+        <Label Content="____" HorizontalAlignment="Left" Margin="20,3,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>
+        <Label Content="____" HorizontalAlignment="Left" Margin="20,-5,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>
+        <Label Content="____" HorizontalAlignment="Left" Margin="20,-6,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>
+        <Label Content="____" HorizontalAlignment="Left" Margin="20,5,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>
+        <Label Content="____" HorizontalAlignment="Left" Margin="20,12,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>
+        <Label Content="Projeto" HorizontalAlignment="Left" Margin="88,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Bold"/>
+        <Label Content="Pds" HorizontalAlignment="Left" Margin="182,14,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="24" FontWeight="Bold" Background="#FFD2CB14" Width="58" Height="39"/>
+        <Label Content="🔍" HorizontalAlignment="Left" Margin="258,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Bold"/>
+        <Label Content="👤" HorizontalAlignment="Left" Margin="304,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
