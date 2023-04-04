@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="353">
     <Grid Background="Black" Width="NaN">
-        <Button Content="Cadastrar Contato" HorizontalAlignment="Left" Margin="20,64,0,0" VerticalAlignment="Top" Background="Black" Foreground="White" Height="32" Width="154"/>
-        <Button Content="Listar Contato" HorizontalAlignment="Left" Margin="174,64,0,0" VerticalAlignment="Top" Background="Black" Foreground="White" Height="32" Width="154"/>
+        <Button x:Name="btCadastrar" Content="Cadastrar Contato" HorizontalAlignment="Left" Margin="20,64,0,0" VerticalAlignment="Top" Background="Black" Foreground="White" Height="32" Width="154" Click="Button_Click"/>
+        <Button x:Name="btListar" Content="Listar Contato" HorizontalAlignment="Left" Margin="174,64,0,0" VerticalAlignment="Top" Background="Black" Foreground="White" Height="32" Width="154" Click="Button_Click_1"/>
         <Label Content="____" HorizontalAlignment="Left" Margin="20,14,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>
         <Label Content="____" HorizontalAlignment="Left" Margin="20,4,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>
         <Label Content="____" HorizontalAlignment="Left" Margin="20,3,0,0" VerticalAlignment="Top" Foreground="#FFBDBF16" Height="56" Width="63" FontSize="24" FontFamily="Impact" FontWeight="Bold"/>

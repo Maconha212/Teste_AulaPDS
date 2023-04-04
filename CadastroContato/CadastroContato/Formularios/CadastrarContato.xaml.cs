@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -28,6 +29,9 @@ namespace CadastroContato.Formularios
         public CadastrarContato()
         {
             InitializeComponent();
+            txtNome.Clear();
+            txtEmail.Clear();
+            txtTelefone.Clear();
 
             Conexao();
         }
@@ -40,49 +44,44 @@ namespace CadastroContato.Formularios
 
             conexao.Open();
         }
+        public void limparEspacos()
+        {
+            txtNome.Clear();
+            txtTelefone.Clear();
+            txtEmail.Clear();
+        }
 
         private void btnSalvar(object sender, RoutedEventArgs e)
         {
             try
             {
-
-                if (!rdSexo1.Checked && !rdSexo2.Checked)
-                {
-                    MessageBox.Show("Marque uma opção");
-                }
-
                 var nome = txtNome.Text;
-                var email = txtEmail.Text;
-                var data_nascimento = dateDataNascimento.ToString();
-                var telefone = txtTelefone.Text;
                 var sexo = "Feminino";
+                var email = txtEmail.Text;
+                var telefone = txtTelefone.Text;
+                DateTime? dataNascimento = null;
 
-
-                if (rdSexo1.Checked)
+                if (dateDataNascimento.SelectedDate != null)
                 {
-                    sexo = "Masculino";
+                    dataNascimento = (DateTime)dateDataNascimento.SelectedDate;
                 }
 
-
-                if (nome != null && email != null && sexo != null && data_nascimento != null && telefone != null)
+                if (nome != "" && sexo != "" && email != "" && telefone != "" && dataNascimento != null)
                 {
-                    string query = "INSERT INTO contato (nome_con, email_con, sexo_con, data_nasc_con, telefone_con) VALUES (@_nome, @_email, @_sexo, @_data_nasc, @_telefone)";
-                    var comando = new MySqlCommand(query, conexao);
+                    var sql = "INSERT INTO contato (nome_con, sexo_con, email_con, telefone_con, data_nasc_con) VALUES (@_nome, @_sexo, @_email, @_telefone, @_dataNasc);";
+                    var cmd = new MySqlCommand(sql, conexao);
 
-                    comando.Parameters.AddWithValue("@_nome", nome);
-                    comando.Parameters.AddWithValue("@_email", email);
-                    comando.Parameters.AddWithValue("@_sexo", sexo);
-                    comando.Parameters.AddWithValue("@_data_nasc", data_nascimento);
-                    comando.Parameters.AddWithValue("@_telefone", telefone);
+                    cmd.Parameters.AddWithValue("@_nome", nome);
+                    cmd.Parameters.AddWithValue("@_sexo", sexo);
+                    cmd.Parameters.AddWithValue("@_email", email);
+                    cmd.Parameters.AddWithValue("@_telefone", telefone);
+                    cmd.Parameters.AddWithValue("@_dataNasc", dataNascimento?.ToString("yyyy-MM-dd"));
 
-                    comando.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Os dados foram salvos com sucesso!!!");
+                    limparEspacos();
                 }
-                else
-                {
-                    MessageBox.Show("Preencha todos os campos!!!");
-                }
+
 
 
             }

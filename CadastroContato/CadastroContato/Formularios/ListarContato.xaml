@@ -18,6 +18,7 @@
         <Label Content="Pds" HorizontalAlignment="Left" Margin="182,14,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="24" FontWeight="Bold" Background="#FFD2CB14" Width="58" Height="39"/>
         <Label Content="🔍" HorizontalAlignment="Left" Margin="258,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Bold"/>
         <Label Content="👤" HorizontalAlignment="Left" Margin="304,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Bold"/>
+        <DataGrid x:Name="dgvContato" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="38,88,38,28" Width="NaN" SelectionChanged="dgvContato_SelectionChanged"/>
 
     </Grid>
 </Window>

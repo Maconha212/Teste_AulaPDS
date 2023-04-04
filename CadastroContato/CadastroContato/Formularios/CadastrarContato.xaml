@@ -18,10 +18,10 @@
         <Label Content="Pds" HorizontalAlignment="Left" Margin="182,14,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="24" FontWeight="Bold" Background="#FFD2CB14" Width="58" Height="39"/>
         <Label Content="🔍" HorizontalAlignment="Left" Margin="258,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Bold"/>
         <Label Content="👤" HorizontalAlignment="Left" Margin="304,12,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="31,98,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" FontFamily="Arial" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="31,289,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" FontFamily="Arial" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="31,338,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="162" FontFamily="Arial" FontSize="16"/>
-        <DatePicker HorizontalAlignment="Left" Margin="31,149,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="31,98,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="31,289,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Margin="31,338,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="162" FontFamily="Arial" FontSize="16"/>
+        <DatePicker x:Name="dateDataNascimento" HorizontalAlignment="Left" Margin="31,149,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Button Content="Salvar" HorizontalAlignment="Left" Margin="31,378,0,0" VerticalAlignment="Top" Background="#FFDCDE19" Foreground="Black" Height="33" Width="103" FontWeight="Bold" FontSize="24" Click="btnSalvar"/>
         <RadioButton Content="Masculino" HorizontalAlignment="Left" Margin="31,214,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White"/>
         <RadioButton Content="Feminino" HorizontalAlignment="Left" Margin="31,242,0,0" VerticalAlignment="Top" FontSize="18" Foreground="White"/>

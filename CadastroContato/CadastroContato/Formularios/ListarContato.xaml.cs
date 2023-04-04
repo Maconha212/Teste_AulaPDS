@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,12 +20,52 @@ namespace CadastroContato.Formularios
     /// </summary>
     public partial class ListarContato : Window
     {
+        private MySqlConnection conexao;
         public ListarContato()
         {
             InitializeComponent();
+            Conexao();
+            Listar();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Conexao()
+        {
+            string conexaoString = "server=localhost;database=app_contato_bd;user=root;password=root;port=3360";
+            conexao = new MySqlConnection(conexaoString);
+            conexao.Open();
+        }
+
+        private void Listar()
+        {
+            Conexao();
+
+            string sql = "SELECT * FROM contato;";
+
+
+            var comando = new MySqlCommand(sql, conexao);
+            var reader = comando.ExecuteReader();
+
+            var lista = new List<Object>();
+
+
+            while (reader.Read())
+            {
+                var contato = new
+                {
+                    Nome = reader.GetString("nome_con"),
+                    Telefone = reader.GetString("telefone_con"),
+                    Email = reader.GetString("email_con"),
+                    Sexo = reader.GetString("sexo_con"),
+                    DataNascimento = reader.GetString("data_nasc_con")
+                };
+
+                lista.Add(contato);
+            }
+
+            dgvContato.ItemsSource = lista;
+        }
+
+        private void dgvContato_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
